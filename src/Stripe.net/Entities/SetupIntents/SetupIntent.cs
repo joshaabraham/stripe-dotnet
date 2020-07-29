@@ -51,15 +51,11 @@ namespace Stripe
         public string CancellationReason { get; set; }
 
         /// <summary>
-        /// <para>
-        /// The client secret of this SetupIntent. Used for client-side retrieval using a
-        /// publishable key.
-        /// </para>
-        /// <para>
-        /// The client secret can be used to complete payment setup from your frontend. It should
-        /// not be stored, logged, embedded in URLs, or exposed to anyone other than the customer.
-        /// Make sure that you have TLS enabled on any page that includes the client secret.
-        /// </para>
+        /// <para> The client secret of this SetupIntent. Used for client-side retrieval using a
+        /// publishable key.  </para> <para> The client secret can be used to complete payment setup
+        /// from your frontend. It should not be stored, logged, embedded in URLs, or exposed to
+        /// anyone other than the customer.  Make sure that you have TLS enabled on any page that
+        /// includes the client secret.  </para>
         /// </summary>
         [JsonProperty("client_secret")]
         public string ClientSecret { get; set; }
@@ -110,8 +106,8 @@ namespace Stripe
         public StripeError LastSetupError { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }

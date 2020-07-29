@@ -14,7 +14,9 @@ namespace Stripe
         public string Object { get; set; }
 
         /// <summary>
-        /// A positive integer in the smallest currency unit (e.g., 100 cents to top up $1.00 or 100 to topup ¥100, a 0-decimal currency) representing how much to top up. The minimum amount is $0.50 US or equivalent in Top-up currency.
+        /// A positive integer in the smallest currency unit (e.g., 100 cents to top up $1.00 or 100
+        /// to topup ¥100, a 0-decimal currency) representing how much to top up. The minimum amount
+        /// is $0.50 US or equivalent in Top-up currency.
         /// </summary>
         [JsonProperty("amount")]
         public long Amount { get; set; }
@@ -22,7 +24,8 @@ namespace Stripe
         #region Expandable BalanceTransaction
 
         /// <summary>
-        /// ID of the balance transaction that describes the impact of this Top-up on your account balance (not including refunds or disputes).
+        /// ID of the balance transaction that describes the impact of this Top-up on your account
+        /// balance (not including refunds or disputes).
         /// </summary>
         [JsonIgnore]
         public string BalanceTransactionId
@@ -61,7 +64,8 @@ namespace Stripe
         public DateTime? ExpectedAvailabilityDate { get; set; }
 
         /// <summary>
-        /// Error code explaining reason for topup failure if available (see the errors section for a list of codes).
+        /// Error code explaining reason for topup failure if available (see the errors section for
+        /// a list of codes).
         /// </summary>
         [JsonProperty("failure_code")]
         public string FailureCode { get; set; }
@@ -76,19 +80,22 @@ namespace Stripe
         public bool Livemode { get; set; }
 
         /// <summary>
-        /// A set of key/value pairs that you can attach to a topup object. It can be useful for storing additional information about the topup in a structured format.
+        /// A set of key/value pairs that you can attach to a topup object. It can be useful for
+        /// storing additional information about the topup in a structured format.
         /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
-        /// For most Stripe users, the source of every Top-up is a bank account. This hash is then the source object describing that bank account.
+        /// For most Stripe users, the source of every Top-up is a bank account. This hash is then
+        /// the source object describing that bank account.
         /// </summary>
         [JsonProperty("source")]
         public Source Source { get; set; }
 
         /// <summary>
-        /// Extra information about a topup. This will appear on your customer's credit card statement.
+        /// Extra information about a topup. This will appear on your customer's credit card
+        /// statement.
         /// </summary>
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }

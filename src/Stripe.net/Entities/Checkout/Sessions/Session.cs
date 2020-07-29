@@ -46,9 +46,9 @@ namespace Stripe.Checkout
         public string CancelUrl { get; set; }
 
         /// <summary>
-        /// A unique string to reference the Checkout Session. This can be a customer ID, a cart
-        /// ID, or similar. It is included in the <c>checkout.session.completed</c> webhook and can
-        /// be used to fulfill the purchase.
+        /// A unique string to reference the Checkout Session. This can be a customer ID, a cart ID,
+        /// or similar. It is included in the <c>checkout.session.completed</c> webhook and can be
+        /// used to fulfill the purchase.
         /// </summary>
         [JsonProperty("client_reference_id")]
         public string ClientReferenceId { get; set; }
@@ -105,8 +105,8 @@ namespace Stripe.Checkout
         public StripeList<LineItem> LineItems { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -119,9 +119,8 @@ namespace Stripe.Checkout
         public string Locale { get; set; }
 
         /// <summary>
-        /// A set of key/value pairs that you can attach to an object. It can
-        /// be useful for storing additional information about the object in a
-        /// structured format.
+        /// A set of key/value pairs that you can attach to an object. It can be useful for storing
+        /// additional information about the object in a structured format.
         /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
@@ -208,12 +207,11 @@ namespace Stripe.Checkout
         public SessionShippingAddressCollection ShippingAddressCollection { get; set; }
 
         /// <summary>
-        /// Describes the type of transaction being performed by Checkout in
-        /// order to customize relevant text on the page, such as the Submit
-        /// button. <c>submit_type</c> can only be specified on checkout
-        /// sessions using line items or a SKU, and not checkout sessions for
-        /// subscriptions. Supported values are <c>auto</c>, <c>book</c>,
-        /// <c>donate</c>, or <c>pay</c>.
+        /// Describes the type of transaction being performed by Checkout in order to customize
+        /// relevant text on the page, such as the Submit button. <c>submit_type</c> can only be
+        /// specified on checkout sessions using line items or a SKU, and not checkout sessions for
+        /// subscriptions. Supported values are <c>auto</c>, <c>book</c>, <c>donate</c>, or
+        /// <c>pay</c>.
         /// </summary>
         [JsonProperty("submit_type")]
         public string SubmitType { get; set; }

@@ -17,9 +17,8 @@ namespace Stripe.Checkout
         public long AmountTax { get; set; }
 
         /// <summary>
-        /// Breakdown of individual tax and discount amounts that add up to the
-        /// totals. This field is not included by default. To include it in
-        /// the response, expand the breakdown field.
+        /// Breakdown of individual tax and discount amounts that add up to the totals. This field
+        /// is not included by default. To include it in the response, expand the breakdown field.
         /// </summary>
         [JsonProperty("breakdown")]
         public SessionTotalDetailsBreakdown Breakdown { get; set; }

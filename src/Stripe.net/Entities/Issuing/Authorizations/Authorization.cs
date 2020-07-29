@@ -91,15 +91,15 @@ namespace Stripe.Issuing
         public string Currency { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
 
         /// <summary>
-        /// The total amount that was authorized or rejected in the local
-        /// <see cref="MerchantCurrency"/>.
+        /// The total amount that was authorized or rejected in the local <see
+        /// cref="MerchantCurrency"/>.
         /// </summary>
         [JsonProperty("merchant_amount")]
         public long MerchantAmount { get; set; }
@@ -120,15 +120,15 @@ namespace Stripe.Issuing
         /// <summary>
         /// Set of key-value pairs that you can attach to an object. This can be useful for storing
         /// additional information about the object in a structured format. Individual keys can be
-        /// unset by posting an empty value to them. All keys can be unset by posting an empty
-        /// value to metadata.
+        /// unset by posting an empty value to them. All keys can be unset by posting an empty value
+        /// to metadata.
         /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
-        /// The pending authorization request. This field will only be non-null during an
-        /// <see cref="Events.IssuingAuthorizationRequest" /> webhook.
+        /// The pending authorization request. This field will only be non-null during an <see
+        /// cref="Events.IssuingAuthorizationRequest" /> webhook.
         /// </summary>
         [JsonProperty("pending_request")]
         public AuthorizationPendingRequest PendingRequest { get; set; }

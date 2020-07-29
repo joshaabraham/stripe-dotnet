@@ -16,9 +16,9 @@ namespace Stripe
         public DateTime? CurrentDeadline { get; set; }
 
         /// <summary>
-        /// The fields that need to be collected to keep the capability enabled. If not collected
-        /// by the <c>current_deadline</c>, these fields appear in  <c>past_due</c> as well, and
-        /// the capability is disabled.
+        /// The fields that need to be collected to keep the capability enabled. If not collected by
+        /// the <c>current_deadline</c>, these fields appear in  <c>past_due</c> as well, and the
+        /// capability is disabled.
         /// </summary>
         [JsonProperty("currently_due")]
         public List<string> CurrentlyDue { get; set; }
@@ -32,15 +32,15 @@ namespace Stripe
         public string DisabledReason { get; set; }
 
         /// <summary>
-        /// The fields that need to be collected again because validation or verification failed
-        /// for some reason.
+        /// The fields that need to be collected again because validation or verification failed for
+        /// some reason.
         /// </summary>
         [JsonProperty("errors")]
         public List<AccountRequirementsError> Errors { get; set; }
 
         /// <summary>
-        /// The fields that need to be collected assuming all volume thresholds are reached. As
-        /// they become required, these fields appear in <c>currently_due</c> as well, and the
+        /// The fields that need to be collected assuming all volume thresholds are reached. As they
+        /// become required, these fields appear in <c>currently_due</c> as well, and the
         /// <c>current_deadline</c> is set.
         /// </summary>
         [JsonProperty("eventually_due")]

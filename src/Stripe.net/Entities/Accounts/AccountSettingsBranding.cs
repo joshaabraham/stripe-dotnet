@@ -9,8 +9,7 @@ namespace Stripe
 
         /// <summary>
         /// (ID of a <see cref="File"/>) An icon for the account. Must be square and at least 128px
-        /// x 128px.
-        /// <para>Expandable.</para>
+        /// x 128px.  <para>Expandable.</para>
         /// </summary>
         [JsonIgnore]
         public string IconId
@@ -39,8 +38,7 @@ namespace Stripe
         /// <summary>
         /// (ID of a <see cref="File"/>) A logo for the account that will be used in Checkout
         /// instead of the icon and without the account's name next to it if provided. Must be at
-        /// least 128px x 128px.
-        /// <para>Expandable.</para>
+        /// least 128px x 128px.  <para>Expandable.</para>
         /// </summary>
         [JsonIgnore]
         public string LogoId

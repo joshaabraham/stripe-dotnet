@@ -38,9 +38,9 @@ namespace Stripe
         /// Final amount due at this time for this invoice. If the invoice's total is smaller than
         /// the minimum charge amount, for example, or if there is account credit that can be
         /// applied to the invoice, the <see cref="AmountDue" /> may be 0. If there is a positive
-        /// <see cref="StartingBalance" /> for the invoice (the customer owes money), the
-        /// <see cref="AmountDue" /> will also take that into account. The charge that gets
-        /// generated for the invoice will be for the amount specified in <see cref="AmountDue" />.
+        /// <see cref="StartingBalance" /> for the invoice (the customer owes money), the <see
+        /// cref="AmountDue" /> will also take that into account. The charge that gets generated for
+        /// the invoice will be for the amount specified in <see cref="AmountDue" />.
         /// </summary>
         [JsonProperty("amount_due")]
         public long AmountDue { get; set; }
@@ -126,11 +126,10 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// Either <c>charge_automatically</c>, or <c>send_invoice</c>. When
-        /// charging automatically, Stripe will attempt to pay this invoice
-        /// using the default source attached to the customer. When sending an
-        /// invoice, Stripe will email this invoice to the customer with payment
-        /// instructions. Defaults to <c>charge_automatically</c>.
+        /// Either <c>charge_automatically</c>, or <c>send_invoice</c>. When charging automatically,
+        /// Stripe will attempt to pay this invoice using the default source attached to the
+        /// customer. When sending an invoice, Stripe will email this invoice to the customer with
+        /// payment instructions. Defaults to <c>charge_automatically</c>.
         /// </summary>
         [JsonProperty("collection_method")]
         public string CollectionMethod { get; set; }
@@ -182,33 +181,33 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// The customer's address. Until the invoice is finalized, this field will equal
-        /// <see cref="Customer.Address" />. Once the invoice is finalized, this field will no
-        /// longer be updated.
+        /// The customer's address. Until the invoice is finalized, this field will equal <see
+        /// cref="Customer.Address" />. Once the invoice is finalized, this field will no longer be
+        /// updated.
         /// </summary>
         [JsonProperty("customer_address")]
         public Address CustomerAddress { get; set; }
 
         /// <summary>
-        /// The customer's email. Until the invoice is finalized, this field will equal
-        /// <see cref="Customer.Email" />. Once the invoice is finalized, this field will no longer
-        /// be updated.
+        /// The customer's email. Until the invoice is finalized, this field will equal <see
+        /// cref="Customer.Email" />. Once the invoice is finalized, this field will no longer be
+        /// updated.
         /// </summary>
         [JsonProperty("customer_email")]
         public string CustomerEmail { get; set; }
 
         /// <summary>
-        /// The customer's name. Until the invoice is finalized, this field will equal
-        /// <see cref="Customer.Name" />. Once the invoice is finalized, this field will no longer
-        /// be updated.
+        /// The customer's name. Until the invoice is finalized, this field will equal <see
+        /// cref="Customer.Name" />. Once the invoice is finalized, this field will no longer be
+        /// updated.
         /// </summary>
         [JsonProperty("customer_name")]
         public string CustomerName { get; set; }
 
         /// <summary>
-        /// The customer's phone number. Until the invoice is finalized, this field will equal
-        /// <see cref="Customer.Phone" />. Once the invoice is finalized, this field will no longer
-        /// be updated.
+        /// The customer's phone number. Until the invoice is finalized, this field will equal <see
+        /// cref="Customer.Phone" />. Once the invoice is finalized, this field will no longer be
+        /// updated.
         /// </summary>
         [JsonProperty("customer_phone")]
         public string CustomerPhone { get; set; }
@@ -230,9 +229,9 @@ namespace Stripe
         public string CustomerTaxExempt { get; set; }
 
         /// <summary>
-        /// The customer's tax ids. Until the invoice is finalized, this field will equal
-        /// <see cref="Customer.TaxIds" />. Once the invoice is finalized, this field will no
-        /// longer be updated.
+        /// The customer's tax ids. Until the invoice is finalized, this field will equal <see
+        /// cref="Customer.TaxIds" />. Once the invoice is finalized, this field will no longer be
+        /// updated.
         /// </summary>
         [JsonProperty("customer_tax_ids")]
         public List<InvoiceCustomerTaxId> CustomerTaxIds { get; set; }
@@ -254,9 +253,9 @@ namespace Stripe
 
         /// <summary>
         ///  (Expanded) The default payment method for the invoice. It must belong to the customer
-        /// associated with the invoice and be in a chargeable state. If not set, defaults to the
-        /// subscription's default payment method, if any, or to the customer's default payment
-        /// method.
+        ///  associated with the invoice and be in a chargeable state. If not set, defaults to the
+        ///  subscription's default payment method, if any, or to the customer's default payment
+        ///  method.
         /// </summary>
         [JsonIgnore]
         public PaymentMethod DefaultPaymentMethod
@@ -387,8 +386,8 @@ namespace Stripe
         public StripeList<InvoiceLineItem> Lines { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -552,7 +551,8 @@ namespace Stripe
         public long Subtotal { get; set; }
 
         /// <summary>
-        /// The amount of tax on this invoice. This is the sum of all the tax amounts on this invoice.
+        /// The amount of tax on this invoice. This is the sum of all the tax amounts on this
+        /// invoice.
         /// </summary>
         [JsonProperty("tax")]
         public long? Tax { get; set; }
@@ -562,8 +562,8 @@ namespace Stripe
         public decimal? TaxPercent { get; set; }
 
         /// <summary>
-        /// If <see cref="BillingReason" /> is set to <c>subscription_threshold</c> this
-        /// returns more information on which threshold rules triggered the invoice.
+        /// If <see cref="BillingReason" /> is set to <c>subscription_threshold</c> this returns
+        /// more information on which threshold rules triggered the invoice.
         /// </summary>
         [JsonProperty("threshold_reason")]
         public InvoiceThresholdReason ThresholdReason { get; set; }

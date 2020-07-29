@@ -20,7 +20,8 @@ namespace Stripe
         public bool Active { get; set; }
 
         /// <summary>
-        /// A list of up to 5 attributes that each SKU can provide values for (e.g. ["color", "size"]).
+        /// A list of up to 5 attributes that each SKU can provide values for (e.g. ["color",
+        /// "size"]).
         /// </summary>
         [JsonProperty("attributes")]
         public List<string> Attributes { get; set; }
@@ -57,7 +58,8 @@ namespace Stripe
         public string Description { get; set; }
 
         /// <summary>
-        /// A list of up to 8 URLs of images for this product, meant to be displayable to the customer.
+        /// A list of up to 8 URLs of images for this product, meant to be displayable to the
+        /// customer.
         /// </summary>
         [JsonProperty("images")]
         public List<string> Images { get; set; }
@@ -69,7 +71,8 @@ namespace Stripe
         public bool Livemode { get; set; }
 
         /// <summary>
-        /// Set of key/value pairs that you can attach to an object. It can be useful for storing additional information about the object in a structured format.
+        /// Set of key/value pairs that you can attach to an object. It can be useful for storing
+        /// additional information about the object in a structured format.
         /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
@@ -81,7 +84,8 @@ namespace Stripe
         public string Name { get; set; }
 
         /// <summary>
-        /// The dimensions of this product for shipping purposes. A SKU associated with this product can override this value by having its own package_dimensions.
+        /// The dimensions of this product for shipping purposes. A SKU associated with this product
+        /// can override this value by having its own package_dimensions.
         /// </summary>
         [JsonProperty("package_dimensions")]
         public PackageDimensions PackageDimensions { get; set; }
@@ -105,7 +109,8 @@ namespace Stripe
         public string Type { get; set; }
 
         /// <summary>
-        /// This represents a unit of this product, such as a seat or API call, on customers' receipts and invoices.
+        /// This represents a unit of this product, such as a seat or API call, on customers'
+        /// receipts and invoices.
         /// </summary>
         [JsonProperty("unit_label")]
         public string UnitLabel { get; set; }

@@ -76,9 +76,9 @@ namespace Stripe
         public long Net { get; set; }
 
         /// <summary>
-        /// <a href="https://stripe.com/docs/reports/reporting-categories">Learn more</a>
-        /// about how reporting categories can help you understand
-        /// balance transactions from an accounting perspective.
+        /// <a href="https://stripe.com/docs/reports/reporting-categories">Learn more</a> about how
+        /// reporting categories can help you understand balance transactions from an accounting
+        /// perspective.
         /// </summary>
         [JsonProperty("reporting_category")]
         public string ReportingCategory { get; set; }
@@ -108,16 +108,16 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// If the transaction's net funds are available in the Stripe balance
-        /// yet. Either <c>available</c> or <c>pending</c>.
+        /// If the transaction's net funds are available in the Stripe balance yet. Either
+        /// <c>available</c> or <c>pending</c>.
         /// </summary>
         [JsonProperty("status")]
         public string Status { get; set; }
 
         /// <summary>
-        /// Transaction type.
-        /// <a href="https://stripe.com/docs/reports/balance-transaction-types">Learn more</a>
-        /// about balance transaction types and what they represent.
+        /// Transaction type.  <a
+        /// href="https://stripe.com/docs/reports/balance-transaction-types">Learn more</a> about
+        /// balance transaction types and what they represent.
         /// </summary>
         [JsonProperty("type")]
         public string Type { get; set; }

@@ -23,11 +23,10 @@ namespace Stripe
         public decimal? ApplicationFeePercent { get; set; }
 
         /// <summary>
-        /// Possible values are <c>phase_start</c> or <c>automatic</c>. If
-        /// <c>phase_start</c> then billing cycle anchor of the
-        /// subscription is set to the start of the phase when entering
-        /// the phase. If <c>automatic</c> then the billing cycle anchor
-        /// is automatically modified as needed when entering the phase.
+        /// Possible values are <c>phase_start</c> or <c>automatic</c>. If <c>phase_start</c> then
+        /// billing cycle anchor of the subscription is set to the start of the phase when entering
+        /// the phase. If <c>automatic</c> then the billing cycle anchor is automatically modified
+        /// as needed when entering the phase.
         /// </summary>
         [JsonProperty("billing_cycle_anchor")]
         public string BillingCycleAnchor { get; set; }
@@ -40,11 +39,10 @@ namespace Stripe
         public SubscriptionBillingThresholds BillingThresholds { get; set; }
 
         /// <summary>
-        /// Either <c>charge_automatically</c>, or <c>send_invoice</c>. When charging
-        /// automatically, Stripe will attempt to pay this subscription at the
-        /// end of the cycle using the default source attached to the customer.
-        /// When sending an invoice, Stripe will email your customer an invoice
-        /// with payment instructions.
+        /// Either <c>charge_automatically</c>, or <c>send_invoice</c>. When charging automatically,
+        /// Stripe will attempt to pay this subscription at the end of the cycle using the default
+        /// source attached to the customer.  When sending an invoice, Stripe will email your
+        /// customer an invoice with payment instructions.
         /// </summary>
         [JsonProperty("collection_method")]
         public string CollectionMethod { get; set; }
@@ -128,8 +126,8 @@ namespace Stripe
         public List<SubscriptionSchedulePhaseItem> Plans { get; set; }
 
         /// <summary>
-        /// Controls whether or not the subscription schedule will prorate when transitioning
-        /// to this phase. Values are <c>create_prorations</c> and <c>none</c>.
+        /// Controls whether or not the subscription schedule will prorate when transitioning to
+        /// this phase. Values are <c>create_prorations</c> and <c>none</c>.
         /// </summary>
         [JsonProperty("proration_behavior")]
         public string ProrationBehavior { get; set; }
@@ -150,9 +148,9 @@ namespace Stripe
         public decimal? TaxPercent { get; set; }
 
         /// <summary>
-        /// The account (if any) the subscription's payments will be attributed
-        /// to for tax reporting, and where funds from each payment will be
-        /// transferred to for each of the subscription's invoices.
+        /// The account (if any) the subscription's payments will be attributed to for tax
+        /// reporting, and where funds from each payment will be transferred to for each of the
+        /// subscription's invoices.
         /// </summary>
         [JsonProperty("transfer_data")]
         public SubscriptionTransferData TransferData { get; set; }

@@ -13,15 +13,13 @@ namespace Stripe.Issuing
         public Address Address { get; set; }
 
         /// <summary>
-        /// The delivery company that shipped a card. One of <c>fedex</c> or
-        /// <c>usps</c>.
+        /// The delivery company that shipped a card. One of <c>fedex</c> or <c>usps</c>.
         /// </summary>
         [JsonProperty("carrier")]
         public string Carrier { get; set; }
 
         /// <summary>
-        /// A unix timestamp representing a best estimate of when the card will
-        /// be delivered.
+        /// A unix timestamp representing a best estimate of when the card will be delivered.
         /// </summary>
         [JsonProperty("eta")]
         [JsonConverter(typeof(DateTimeConverter))]
@@ -34,8 +32,8 @@ namespace Stripe.Issuing
         public string Name { get; set; }
 
         /// <summary>
-        /// Shipment speed. One of <c>express</c>, <c>priority</c>, or
-        /// <c>standard</c>. Defaults to <c>standard</c>.
+        /// Shipment speed. One of <c>express</c>, <c>priority</c>, or <c>standard</c>. Defaults to
+        /// <c>standard</c>.
         /// </summary>
         [JsonProperty("service")]
         public string Service { get; set; }
@@ -53,8 +51,8 @@ namespace Stripe.Issuing
         public string TrackingNumber { get; set; }
 
         /// <summary>
-        /// A link to the shipping carrier's site where you can view detailed
-        /// information about a card shipment.
+        /// A link to the shipping carrier's site where you can view detailed information about a
+        /// card shipment.
         /// </summary>
         [JsonProperty("tracking_url")]
         public string TrackingUrl { get; set; }

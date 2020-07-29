@@ -30,8 +30,8 @@ namespace Stripe
         /// <c>metered</c>. Allowed values are <c>sum</c> for summing up all usage during a period,
         /// <c>last_during_period</c> for picking the last usage record reported within a period,
         /// <c>last_ever</c> for picking the last usage record ever (across period bounds) or
-        /// <c>max</c> which picks the usage record with the maximum reported usage during a
-        /// period. Defaults to <c>sum</c>.
+        /// <c>max</c> which picks the usage record with the maximum reported usage during a period.
+        /// Defaults to <c>sum</c>.
         /// </summary>
         [JsonProperty("aggregate_usage")]
         public string AggregateUsage { get; set; }
@@ -54,8 +54,8 @@ namespace Stripe
         /// <c>per_unit</c> indicates that the fixed amount (specified in amount) will be charged
         /// per unit in quantity (for plans with usage_type=licensed), or per unit of total usage
         /// (for plans with usage_type=metered). <c>tiered</c> indicates that the unit pricing will
-        /// be computed using a tiering strategy as defined using the <see cref="Tiers"/> and
-        /// <see cref="TiersMode"/> attributes.
+        /// be computed using a tiering strategy as defined using the <see cref="Tiers"/> and <see
+        /// cref="TiersMode"/> attributes.
         /// </summary>
         [JsonProperty("billing_scheme")]
         public string BillingScheme { get; set; }
@@ -94,8 +94,8 @@ namespace Stripe
         public long IntervalCount { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -140,8 +140,8 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// Each element represents a pricing tier. This parameter requires <see cref="BillingScheme"/>
-        /// to be set to <c>tiered</c>.
+        /// Each element represents a pricing tier. This parameter requires <see
+        /// cref="BillingScheme"/> to be set to <c>tiered</c>.
         /// </summary>
         [JsonProperty("tiers")]
         public List<PlanTier> Tiers { get; set; }
@@ -156,8 +156,8 @@ namespace Stripe
         public string TiersMode { get; set; }
 
         /// <summary>
-        /// Apply a transformation to the reported usage or set quantity before computing the
-        /// billed price. Cannot be combined with <see cref="Tiers"/>.
+        /// Apply a transformation to the reported usage or set quantity before computing the billed
+        /// price. Cannot be combined with <see cref="Tiers"/>.
         /// </summary>
         [JsonProperty("transform_usage")]
         public PlanTransformUsage TransformUsage { get; set; }

@@ -29,10 +29,10 @@ namespace Stripe
         public bool DirectorsProvided { get; set; }
 
         /// <summary>
-        ///  Whether the company's executives have been provided. Set this
-        ///  Boolean to <c>true</c> after creating all the company's executives with
-        ///  <a href="https://stripe.com/docs/api/persons">the Persons API</a> for
-        ///  accounts with a <c>relationship.executive</c> requirement.
+        ///  Whether the company's executives have been provided. Set this Boolean to <c>true</c>
+        ///  after creating all the company's executives with <a
+        ///  href="https://stripe.com/docs/api/persons">the Persons API</a> for accounts with a
+        ///  <c>relationship.executive</c> requirement.
         /// </summary>
         [JsonProperty("executives_provided")]
         public bool ExecutivesProvided { get; set; }
@@ -80,8 +80,8 @@ namespace Stripe
         public bool TaxIdProvided { get; set; }
 
         /// <summary>
-        /// The jurisdiction in which the <c>tax_id</c> is registered (Germany-based
-        /// companies only).
+        /// The jurisdiction in which the <c>tax_id</c> is registered (Germany-based companies
+        /// only).
         /// </summary>
         [JsonProperty("tax_id_registrar")]
         public string TaxIdRegistrar { get; set; }

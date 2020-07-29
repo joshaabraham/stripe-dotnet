@@ -12,9 +12,9 @@ namespace Stripe
 
         /// <summary>
         /// Indicates if the <c>billing_cycle_anchor</c> should be reset when a threshold is
-        /// reached. If true, <c>billing_cycle_anchor</c> will be updated to the date/time
-        /// the threshold was last reached; otherwise, the value will remain unchanged. This value
-        /// may not be true if the subscription contains items with plans that have
+        /// reached. If true, <c>billing_cycle_anchor</c> will be updated to the date/time the
+        /// threshold was last reached; otherwise, the value will remain unchanged. This value may
+        /// not be true if the subscription contains items with plans that have
         /// <c>aggregate_usage=last_ever</c>.
         /// </summary>
         [JsonProperty("reset_billing_cycle_anchor")]

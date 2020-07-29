@@ -20,7 +20,9 @@ namespace Stripe
         public bool Active { get; set; }
 
         /// <summary>
-        /// A dictionary of attributes and values for the attributes defined by the product. If, for example, a product's attributes are ["size", "gender"], a valid SKU has the following dictionary of attributes: {"size": "Medium", "gender": "Unisex"}.
+        /// A dictionary of attributes and values for the attributes defined by the product. If, for
+        /// example, a product's attributes are ["size", "gender"], a valid SKU has the following
+        /// dictionary of attributes: {"size": "Medium", "gender": "Unisex"}.
         /// </summary>
         [JsonProperty("attributes")]
         public Dictionary<string, string> Attributes { get; set; }
@@ -63,7 +65,8 @@ namespace Stripe
         public bool Livemode { get; set; }
 
         /// <summary>
-        /// Set of key/value pairs that you can attach to an object. It can be useful for storing additional information about the object in a structured format.
+        /// Set of key/value pairs that you can attach to an object. It can be useful for storing
+        /// additional information about the object in a structured format.
         /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
@@ -75,7 +78,8 @@ namespace Stripe
         public PackageDimensions PackageDimensions { get; set; }
 
         /// <summary>
-        /// The cost of the item as a positive integer in the smallest currency unit (that is, 100 cents to charge $1.00, or 100 to charge ¥100, Japanese Yen being a 0-decimal currency).
+        /// The cost of the item as a positive integer in the smallest currency unit (that is, 100
+        /// cents to charge $1.00, or 100 to charge ¥100, Japanese Yen being a 0-decimal currency).
         /// </summary>
         [JsonProperty("price")]
         public long Price { get; set; }

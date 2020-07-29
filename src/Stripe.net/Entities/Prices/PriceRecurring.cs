@@ -9,8 +9,8 @@ namespace Stripe
         /// <c>metered</c>. Allowed values are <c>sum</c> for summing up all usage during a period,
         /// <c>last_during_period</c> for picking the last usage record reported within a period,
         /// <c>last_ever</c> for picking the last usage record ever (across period bounds) or
-        /// <c>max</c> which picks the usage record with the maximum reported usage during a
-        /// period. Defaults to <c>sum</c>.
+        /// <c>max</c> which picks the usage record with the maximum reported usage during a period.
+        /// Defaults to <c>sum</c>.
         /// </summary>
         [JsonProperty("aggregate_usage")]
         public string AggregateUsage { get; set; }

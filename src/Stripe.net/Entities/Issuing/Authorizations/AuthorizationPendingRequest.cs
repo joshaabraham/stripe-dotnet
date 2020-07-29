@@ -25,8 +25,8 @@ namespace Stripe.Issuing
         public bool IsAmountControllable { get; set; }
 
         /// <summary>
-        /// The amount the merchant is requesting to be authorized in the
-        /// <see cref="MerchantCurrency"/>.
+        /// The amount the merchant is requesting to be authorized in the <see
+        /// cref="MerchantCurrency"/>.
         /// </summary>
         [JsonProperty("merchant_amount")]
         public long MerchantAmount { get; set; }

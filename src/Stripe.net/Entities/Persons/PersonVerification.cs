@@ -21,8 +21,7 @@ namespace Stripe
 
         /// <summary>
         /// A machine-readable code specifying the verification state for this person. One of
-        /// <c>document_name_mismatch</c>, <c>failed_keyed_identity</c>, or
-        /// <c>failed_other</c>.
+        /// <c>document_name_mismatch</c>, <c>failed_keyed_identity</c>, or <c>failed_other</c>.
         /// </summary>
         [JsonProperty("details_code")]
         public string DetailsCode { get; set; }

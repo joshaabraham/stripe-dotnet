@@ -142,8 +142,8 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -222,8 +222,8 @@ namespace Stripe
         public string SubscriptionItem { get; set; }
 
         /// <summary>
-        /// The tax rates which apply to the invoice item. When set, the <see cref="Invoice.DefaultTaxRates"/>
-        /// on the invoice do not apply to this invoice item.
+        /// The tax rates which apply to the invoice item. When set, the <see
+        /// cref="Invoice.DefaultTaxRates"/> on the invoice do not apply to this invoice item.
         /// </summary>
         [JsonProperty("tax_rates")]
         public List<TaxRate> TaxRates { get; set; }

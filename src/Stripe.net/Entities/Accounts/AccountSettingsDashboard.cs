@@ -5,8 +5,8 @@ namespace Stripe
     public class AccountSettingsDashboard : StripeEntity<AccountSettingsDashboard>
     {
         /// <summary>
-        /// The display name for this account. This is used on the Stripe Dashboard to
-        /// differentiate between accounts.
+        /// The display name for this account. This is used on the Stripe Dashboard to differentiate
+        /// between accounts.
         /// </summary>
         [JsonProperty("display_name")]
         public string DisplayName { get; set; }

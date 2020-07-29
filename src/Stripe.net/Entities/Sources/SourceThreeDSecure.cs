@@ -5,25 +5,29 @@ namespace Stripe
     public class SourceThreeDSecure : StripeEntity<SourceThreeDSecure>
     {
         /// <summary>
-        /// If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.
+        /// If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or
+        /// `unchecked`.
         /// </summary>
         [JsonProperty("address_line1_check")]
         public string AddressLine1Check { get; set; }
 
         /// <summary>
-        /// If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.
+        /// If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or
+        /// `unchecked`.
         /// </summary>
         [JsonProperty("address_zip_check")]
         public string AddressZipCheck { get; set; }
 
         /// <summary>
-        /// True if the cardholder went through the authentication flow and their bank indicated that authentication succeeded.
+        /// True if the cardholder went through the authentication flow and their bank indicated
+        /// that authentication succeeded.
         /// </summary>
         [JsonProperty("authenticated")]
         public bool Authenticated { get; set; }
 
         /// <summary>
-        /// Card brand. Can be `American Express`, `Diners Club`, `Discover`, `JCB`, `MasterCard`, `UnionPay`, `Visa`, or `Unknown`.
+        /// Card brand. Can be `American Express`, `Diners Club`, `Discover`, `JCB`, `MasterCard`,
+        /// `UnionPay`, `Visa`, or `Unknown`.
         /// </summary>
         [JsonProperty("brand")]
         public string Brand { get; set; }
@@ -47,7 +51,8 @@ namespace Stripe
         public string Customer { get; set; }
 
         /// <summary>
-        /// If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.
+        /// If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or
+        /// `unchecked`.
         /// </summary>
         [JsonProperty("cvc_check")]
         public string CvcCheck { get; set; }
@@ -77,7 +82,9 @@ namespace Stripe
         public long ExpYear { get; set; }
 
         /// <summary>
-        /// Uniquely identifies this particular card number. You can use this attribute to check whether two customers who've signed up with you are using the same card number, for example.
+        /// Uniquely identifies this particular card number. You can use this attribute to check
+        /// whether two customers who've signed up with you are using the same card number, for
+        /// example.
         /// </summary>
         [JsonProperty("fingerprint")]
         public string Fingerprint { get; set; }
@@ -107,13 +114,15 @@ namespace Stripe
         public string Last4 { get; set; }
 
         /// <summary>
-        /// The card's 3D Secure support status. Can be one of `not_supported`, `required`, `recommended` or `optional`.
+        /// The card's 3D Secure support status. Can be one of `not_supported`, `required`,
+        /// `recommended` or `optional`.
         /// </summary>
         [JsonProperty("three_d_secure")]
         public string ThreeDSecure { get; set; }
 
         /// <summary>
-        /// If the card number is tokenized, this is the method that was used. Can be `apple_pay` or `android_pay`.
+        /// If the card number is tokenized, this is the method that was used. Can be `apple_pay` or
+        /// `android_pay`.
         /// </summary>
         [JsonProperty("tokenization_method")]
         public string TokenizationMethod { get; set; }

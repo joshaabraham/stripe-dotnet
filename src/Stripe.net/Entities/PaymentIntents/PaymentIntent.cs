@@ -63,7 +63,8 @@ namespace Stripe
 
         /// <summary>
         /// The amount of the application fee (if any) for the resulting payment. See the
-        /// PaymentIntents <a href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
+        /// PaymentIntents <a
+        /// href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
         /// use case for connected accounts</a> for details.
         /// </summary>
         [JsonProperty("application_fee_amount")]
@@ -86,10 +87,10 @@ namespace Stripe
         public string CancellationReason { get; set; }
 
         /// <summary>
-        /// One of <c>automatic</c> (default) or <c>manual</c>.
-        /// When the capture method is <c>automatic</c>, Stripe automatically captures funds when
-        /// the customer authorizes the payment.
-        /// Change the capture method to <c>manual</c> if you wish to <a href="https://stripe.com/docs/payments/payment-intents/quickstart#automatic-confirmation-flow">
+        /// One of <c>automatic</c> (default) or <c>manual</c>.  When the capture method is
+        /// <c>automatic</c>, Stripe automatically captures funds when the customer authorizes the
+        /// payment.  Change the capture method to <c>manual</c> if you wish to <a
+        /// href="https://stripe.com/docs/payments/payment-intents/quickstart#automatic-confirmation-flow">
         /// separate authorization and capture</a> for payment methods that support this.
         /// </summary>
         [JsonProperty("capture_method")]
@@ -103,11 +104,11 @@ namespace Stripe
 
         /// <summary>
         /// The client secret of this PaymentIntent. Used for client-side retrieval using a
-        /// publishable key.
-        /// The client secret can be used to complete a payment from your frontend. It should not
-        /// be stored, logged, embedded in URLs, or exposed to anyone other than the customer. Make
-        /// sure that you have TLS enabled on any page that includes the client secret.
-        /// Please refer to our <a href="https://stripe.com/docs/payments/payment-intents/quickstart#automatic-confirmation-flow">
+        /// publishable key.  The client secret can be used to complete a payment from your
+        /// frontend. It should not be stored, logged, embedded in URLs, or exposed to anyone other
+        /// than the customer. Make sure that you have TLS enabled on any page that includes the
+        /// client secret.  Please refer to our <a
+        /// href="https://stripe.com/docs/payments/payment-intents/quickstart#automatic-confirmation-flow">
         /// automatic confirmation quickstart guide</a> to learn about how client_secret should be
         /// handled.
         /// </summary>
@@ -115,14 +116,13 @@ namespace Stripe
         public string ClientSecret { get; set; }
 
         /// <summary>
-        /// One of <c>automatic</c> (default) or <c>manual</c>.
-        /// When the confirmation method is <c>automatic</c>, a PaymentIntent can be confirmed
-        /// using a publishable key. After next actions are handled, no additional confirmation is
-        /// required to complete the payment.
-        /// When the confirmation method is <c>manual</c>, all payment attempts must be made using
-        /// a secret key. The PaymentIntent returns to the requires_confirmation state after
-        /// handling next_actions, and requires your server to initiate each payment attempt with
-        /// an explicit confirmation.
+        /// One of <c>automatic</c> (default) or <c>manual</c>.  When the confirmation method is
+        /// <c>automatic</c>, a PaymentIntent can be confirmed using a publishable key. After next
+        /// actions are handled, no additional confirmation is required to complete the payment.
+        /// When the confirmation method is <c>manual</c>, all payment attempts must be made using a
+        /// secret key. The PaymentIntent returns to the requires_confirmation state after handling
+        /// next_actions, and requires your server to initiate each payment attempt with an explicit
+        /// confirmation.
         /// </summary>
         [JsonProperty("confirmation_method")]
         public string ConfirmationMethod { get; set; }
@@ -143,10 +143,9 @@ namespace Stripe
         #region Expandable Customer
 
         /// <summary>
-        /// ID of the Customer this PaymentIntent belongs to, if one exists.
-        /// If present, payment methods used with this PaymentIntent can only be attached to this
-        /// Customer, and payment methods attached to other Customers cannot be used with this
-        /// PaymentIntent.
+        /// ID of the Customer this PaymentIntent belongs to, if one exists.  If present, payment
+        /// methods used with this PaymentIntent can only be attached to this Customer, and payment
+        /// methods attached to other Customers cannot be used with this PaymentIntent.
         /// </summary>
         [JsonIgnore]
         public string CustomerId
@@ -204,8 +203,8 @@ namespace Stripe
         public StripeError LastPaymentError { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -227,8 +226,9 @@ namespace Stripe
         #region Expandable OnBehalfOf
 
         /// <summary>
-        /// The account (if any) for which the funds of the PaymentIntent are intended.
-        /// See the PaymentIntents <a href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
+        /// The account (if any) for which the funds of the PaymentIntent are intended.  See the
+        /// PaymentIntents <a
+        /// href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
         /// use case for connected accounts</a> for details.
         /// </summary>
         [JsonIgnore]
@@ -318,14 +318,12 @@ namespace Stripe
 
         /// <summary>
         /// Indicates that you intend to make future payments with this PaymentIntent's payment
-        /// method.
-        /// If present, the payment method used with this PaymentIntent can be attached to a
-        /// Customer, even after the transaction completes.
-        /// Use <c>on_session</c> if you intend to only reuse the payment method when your customer
-        /// is present in your checkout flow. Use <c>off_session</c> if your customer may or may
-        /// not be in your checkout flow.
-        /// Stripe uses this to dynamically optimize your payment flow and comply with regional
-        /// legislation and network rules. For example, if your customer is impacted by SCA, using
+        /// method.  If present, the payment method used with this PaymentIntent can be attached to
+        /// a Customer, even after the transaction completes.  Use <c>on_session</c> if you intend
+        /// to only reuse the payment method when your customer is present in your checkout flow.
+        /// Use <c>off_session</c> if your customer may or may not be in your checkout flow.  Stripe
+        /// uses this to dynamically optimize your payment flow and comply with regional legislation
+        /// and network rules. For example, if your customer is impacted by SCA, using
         /// <c>off_session</c> will ensure that they are authenticated while processing this
         /// PaymentIntent. You will then be able to make later off-session payments for this
         /// customer.
@@ -383,14 +381,16 @@ namespace Stripe
         /// Status of this PaymentIntent, one of <c>requires_payment_method</c>,
         /// <c>requires_confirmation</c>, <c>requires_action</c>, <c>processing</c>,
         /// <c>requires_capture</c>, <c>canceled</c>, or <c>succeeded</c>. Read more about each
-        /// PaymentIntent <a href="https://stripe.com/docs/payments/intents#intent-statuses">status</a>.
+        /// PaymentIntent <a
+        /// href="https://stripe.com/docs/payments/intents#intent-statuses">status</a>.
         /// </summary>
         [JsonProperty("status")]
         public string Status { get; set; }
 
         /// <summary>
         /// The data with which to automatically create a Transfer when the payment is finalized.
-        /// See the PaymentIntents <a href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
+        /// See the PaymentIntents <a
+        /// href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
         /// use case for connected accounts</a> for details.
         /// </summary>
         [JsonProperty("transfer_data")]
@@ -398,7 +398,8 @@ namespace Stripe
 
         /// <summary>
         /// A string that identifies the resulting payment as part of a group. See the
-        /// PaymentIntents <a href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
+        /// PaymentIntents <a
+        /// href="https://stripe.com/docs/payments/payment-intents/use-cases#connected-accounts">
         /// use case for connected accounts</a> for details.
         /// </summary>
         [JsonProperty("transfer_group")]

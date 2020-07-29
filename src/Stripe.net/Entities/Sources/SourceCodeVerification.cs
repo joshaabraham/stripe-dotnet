@@ -5,7 +5,8 @@ namespace Stripe
     public class SourceCodeVerification : StripeEntity<SourceCodeVerification>
     {
         /// <summary>
-        /// The number of attempts remaining to authenticate the source object with a verification code.
+        /// The number of attempts remaining to authenticate the source object with a verification
+        /// code.
         /// </summary>
         [JsonProperty("attempts_remaining")]
         public long AttemptsRemaining { get; set; }

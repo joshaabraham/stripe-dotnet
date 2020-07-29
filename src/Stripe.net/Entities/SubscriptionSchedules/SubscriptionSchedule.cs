@@ -20,8 +20,8 @@ namespace Stripe
         public string Object { get; set; }
 
         /// <summary>
-        /// Time at which the subscription schedule was canceled. Measured in seconds since the
-        /// Unix epoch.
+        /// Time at which the subscription schedule was canceled. Measured in seconds since the Unix
+        /// epoch.
         /// </summary>
         [JsonProperty("canceled_at")]
         [JsonConverter(typeof(DateTimeConverter))]
@@ -91,8 +91,8 @@ namespace Stripe
         public string EndBehavior { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -110,8 +110,8 @@ namespace Stripe
         public List<SubscriptionSchedulePhase> Phases { get; set; }
 
         /// <summary>
-        /// Time at which the subscription schedule was released. Measured in seconds since the
-        /// Unix epoch.
+        /// Time at which the subscription schedule was released. Measured in seconds since the Unix
+        /// epoch.
         /// </summary>
         [JsonProperty("released_at")]
         [JsonConverter(typeof(DateTimeConverter))]
@@ -124,8 +124,8 @@ namespace Stripe
         public string ReleasedSubscription { get; set; }
 
         /// <summary>
-        /// Possible values are <c>active</c>, <c>canceled</c>, <c>completed</c>,
-        /// <c>not_started</c> and <c>released</c>.
+        /// Possible values are <c>active</c>, <c>canceled</c>, <c>completed</c>, <c>not_started</c>
+        /// and <c>released</c>.
         /// </summary>
         [JsonProperty("status")]
         public string Status { get; set; }

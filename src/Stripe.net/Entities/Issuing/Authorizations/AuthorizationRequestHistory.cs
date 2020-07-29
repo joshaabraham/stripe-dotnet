@@ -32,8 +32,8 @@ namespace Stripe.Issuing
         public string Currency { get; set; }
 
         /// <summary>
-        /// The total amount that was authorized or rejected in the local
-        /// <see cref="MerchantCurrency"/>.
+        /// The total amount that was authorized or rejected in the local <see
+        /// cref="MerchantCurrency"/>.
         /// </summary>
         [JsonProperty("merchant_amount")]
         public long MerchantAmount { get; set; }

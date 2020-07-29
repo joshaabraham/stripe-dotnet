@@ -23,7 +23,8 @@ namespace Stripe
         public string Status { get; set; }
 
         /// <summary>
-        /// The URL provided to you to redirect a customer to as part of a redirect authentication flow.
+        /// The URL provided to you to redirect a customer to as part of a redirect authentication
+        /// flow.
         /// </summary>
         [JsonProperty("url")]
         public string Url { get; set; }

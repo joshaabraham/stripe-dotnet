@@ -58,8 +58,8 @@ namespace Stripe
         public bool? Deleted { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -117,8 +117,8 @@ namespace Stripe
         public PriceRecurring Recurring { get; set; }
 
         /// <summary>
-        /// Each element represents a pricing tier. This parameter requires <see cref="BillingScheme"/>
-        /// to be set to <c>tiered</c>.
+        /// Each element represents a pricing tier. This parameter requires <see
+        /// cref="BillingScheme"/> to be set to <c>tiered</c>.
         /// </summary>
         [JsonProperty("tiers")]
         public List<PriceTier> Tiers { get; set; }
@@ -133,8 +133,8 @@ namespace Stripe
         public string TiersMode { get; set; }
 
         /// <summary>
-        /// Apply a transformation to the reported usage or set quantity before computing the
-        /// billed price. Cannot be combined with <see cref="Tiers"/>.
+        /// Apply a transformation to the reported usage or set quantity before computing the billed
+        /// price. Cannot be combined with <see cref="Tiers"/>.
         /// </summary>
         [JsonProperty("transform_quantity")]
         public PriceTransformQuantity TransformQuantity { get; set; }

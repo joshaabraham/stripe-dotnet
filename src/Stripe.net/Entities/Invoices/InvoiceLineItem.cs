@@ -113,8 +113,7 @@ namespace Stripe
         public string Type { get; set; }
 
         /// <summary>
-        /// Set to <c>true</c> if we grouped proration items into one,
-        /// <c>false</c> if not.
+        /// Set to <c>true</c> if we grouped proration items into one, <c>false</c> if not.
         /// </summary>
         [JsonProperty("unified_proration")]
         public bool UnifiedProration { get; set; }

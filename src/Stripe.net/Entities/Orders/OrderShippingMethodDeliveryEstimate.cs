@@ -11,7 +11,8 @@ namespace Stripe
         public string Date { get; set; }
 
         /// <summary>
-        /// If type is "range", earliest will be be the earliest delivery date in the format YYYY-MM-DD.
+        /// If type is "range", earliest will be be the earliest delivery date in the format
+        /// YYYY-MM-DD.
         /// </summary>
         [JsonProperty("earliest")]
         public string Earliest { get; set; }

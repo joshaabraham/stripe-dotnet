@@ -11,8 +11,8 @@ namespace Stripe
         public AccountSettingsBacsDebitPayments BacsDebitPayments { get; set; }
 
         /// <summary>
-        /// Settings used to apply the account's branding to email receipts, invoices, Checkout,
-        /// and other products.
+        /// Settings used to apply the account's branding to email receipts, invoices, Checkout, and
+        /// other products.
         /// </summary>
         [JsonProperty("branding")]
         public AccountSettingsBranding Branding { get; set; }

@@ -11,8 +11,7 @@ namespace Stripe
         public long? Amount { get; set; }
 
         /// <summary>
-        /// This currency of this order item. Required when <c>amount</c> is
-        /// present.
+        /// This currency of this order item. Required when <c>amount</c> is present.
         /// </summary>
         [JsonProperty("currency")]
         public string Currency { get; set; }
@@ -30,8 +29,8 @@ namespace Stripe
         public string Parent { get; set; }
 
         /// <summary>
-        /// The quantity of this order item. When type is <c>sku</c>, this is
-        /// the number of instances of the SKU to be ordered.
+        /// The quantity of this order item. When type is <c>sku</c>, this is the number of
+        /// instances of the SKU to be ordered.
         /// </summary>
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }

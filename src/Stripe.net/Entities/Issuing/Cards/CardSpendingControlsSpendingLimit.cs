@@ -19,8 +19,8 @@ namespace Stripe.Issuing
 
         /// <summary>
         /// The time interval with which to apply this spending limit towards. Allowed values are
-        /// <c>per_authorization</c>, <c>daily</c>, <c>weekly</c>, <c>monthly</c>, <c>yearly</c>,
-        /// or <c>all_time</c>.
+        /// <c>per_authorization</c>, <c>daily</c>, <c>weekly</c>, <c>monthly</c>, <c>yearly</c>, or
+        /// <c>all_time</c>.
         /// </summary>
         [JsonProperty("interval")]
         public string Interval { get; set; }

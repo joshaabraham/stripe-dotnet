@@ -30,8 +30,7 @@ namespace Stripe
         public List<SourceSourceOrderItem> Items { get; set; }
 
         /// <summary>
-        /// The shipping address for the order. Present if the order is for goods
-        /// to be shipped.
+        /// The shipping address for the order. Present if the order is for goods to be shipped.
         /// </summary>
         [JsonProperty("shipping")]
         public Shipping Shipping { get; set; }

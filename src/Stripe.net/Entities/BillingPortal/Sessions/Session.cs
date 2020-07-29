@@ -32,14 +32,15 @@ namespace Stripe.BillingPortal
         public string Customer { get; set; }
 
         /// <summary>
-        /// Has the value <c>true</c> if the object exists in live mode or the value
-        /// <c>false</c> if the object exists in test mode.
+        /// Has the value <c>true</c> if the object exists in live mode or the value <c>false</c> if
+        /// the object exists in test mode.
         /// </summary>
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
 
         /// <summary>
-        /// The URL to which Stripe should send customers when they click on the link to return to your website.
+        /// The URL to which Stripe should send customers when they click on the link to return to
+        /// your website.
         /// </summary>
         [JsonProperty("return_url")]
         public string ReturnUrl { get; set; }

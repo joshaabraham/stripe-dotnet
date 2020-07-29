@@ -56,8 +56,8 @@ namespace Stripe
         public DateTime? RequestedAt { get; set; }
 
         /// <summary>
-        /// Information about the requirements for this capability, including what information
-        /// needs to be collected, and by when.
+        /// Information about the requirements for this capability, including what information needs
+        /// to be collected, and by when.
         /// </summary>
         [JsonProperty("requirements")]
         public CapabilityRequirements Requirements { get; set; }

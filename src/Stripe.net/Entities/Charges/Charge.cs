@@ -20,13 +20,16 @@ namespace Stripe
         public string Object { get; set; }
 
         /// <summary>
-        /// A positive integer in the smallest currency unit (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a 0-decimal currency) representing how much to charge. The minimum amount is $0.50 US or equivalent in charge currency.
+        /// A positive integer in the smallest currency unit (e.g., 100 cents to charge $1.00 or 100
+        /// to charge ¥100, a 0-decimal currency) representing how much to charge. The minimum
+        /// amount is $0.50 US or equivalent in charge currency.
         /// </summary>
         [JsonProperty("amount")]
         public long Amount { get; set; }
 
         /// <summary>
-        /// Amount in cents refunded (can be less than the amount attribute on the charge if a partial refund was issued).
+        /// Amount in cents refunded (can be less than the amount attribute on the charge if a
+        /// partial refund was issued).
         /// </summary>
         [JsonProperty("amount_refunded")]
         public long AmountRefunded { get; set; }
@@ -77,7 +80,8 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// The amount of the application application fee (if any) for the charge. See the Connect documentation for details.
+        /// The amount of the application application fee (if any) for the charge. See the Connect
+        /// documentation for details.
         /// </summary>
         [JsonProperty("application_fee_amount")]
         public long? ApplicationFeeAmount { get; set; }
@@ -92,7 +96,8 @@ namespace Stripe
         #region Expandable BalanceTransaction
 
         /// <summary>
-        /// ID of the balance transaction that describes the impact of this charge on your account balance (not including refunds or disputes).
+        /// ID of the balance transaction that describes the impact of this charge on your account
+        /// balance (not including refunds or disputes).
         /// </summary>
         [JsonIgnore]
         public string BalanceTransactionId
@@ -128,7 +133,8 @@ namespace Stripe
         public string CalculatedStatementDescriptor { get; set; }
 
         /// <summary>
-        /// If the charge was created without capturing, this boolean represents whether or not it is still uncaptured or has since been captured.
+        /// If the charge was created without capturing, this boolean represents whether or not it
+        /// is still uncaptured or has since been captured.
         /// </summary>
         [JsonProperty("captured")]
         public bool Captured { get; set; }
@@ -180,7 +186,8 @@ namespace Stripe
         }
 
         /// <summary>
-        /// The account (if any) the charge was made on behalf of, with an automatic transfer. See the Connect documentation for details.
+        /// The account (if any) the charge was made on behalf of, with an automatic transfer. See
+        /// the Connect documentation for details.
         /// </summary>
         [JsonIgnore]
         public Account Destination
@@ -225,7 +232,8 @@ namespace Stripe
         public bool Disputed { get; set; }
 
         /// <summary>
-        /// Error code explaining reason for charge failure if available (see the errors section for a list of codes).
+        /// Error code explaining reason for charge failure if available (see the errors section for
+        /// a list of codes).
         /// </summary>
         [JsonProperty("failure_code")]
         public string FailureCode { get; set; }
@@ -267,8 +275,8 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// Details about the level III data associated with the Charge.
-        /// This is a gated property and most integrations can not access it.
+        /// Details about the level III data associated with the Charge.  This is a gated property
+        /// and most integrations can not access it.
         /// </summary>
         [JsonProperty("level3")]
         public ChargeLevel3 Level3 { get; set; }
@@ -277,7 +285,8 @@ namespace Stripe
         public bool Livemode { get; set; }
 
         /// <summary>
-        /// A set of key/value pairs that you can attach to a charge object. It can be useful for storing additional information about the charge in a structured format.
+        /// A set of key/value pairs that you can attach to a charge object. It can be useful for
+        /// storing additional information about the charge in a structured format.
         /// </summary>
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
@@ -285,7 +294,8 @@ namespace Stripe
         #region Expandable OnBehalfOf
 
         /// <summary>
-        /// The account (if any) the charge was made on behalf of without triggering an automatic transfer. See the Connect documentation for details.
+        /// The account (if any) the charge was made on behalf of without triggering an automatic
+        /// transfer. See the Connect documentation for details.
         /// </summary>
         [JsonIgnore]
         public string OnBehalfOfId
@@ -442,7 +452,8 @@ namespace Stripe
         public Shipping Shipping { get; set; }
 
         /// <summary>
-        /// For most Stripe users, the source of every charge is a credit or debit card. This hash is then the card object describing that card.
+        /// For most Stripe users, the source of every charge is a credit or debit card. This hash
+        /// is then the card object describing that card.
         /// </summary>
         [JsonProperty("source")]
         [JsonConverter(typeof(StripeObjectConverter))]
@@ -451,7 +462,8 @@ namespace Stripe
         #region Expandable SourceTransfer
 
         /// <summary>
-        /// The transfer ID which created this charge. Only present if the charge came from another Stripe account. See the Connect documentation for details.
+        /// The transfer ID which created this charge. Only present if the charge came from another
+        /// Stripe account. See the Connect documentation for details.
         /// </summary>
         [JsonIgnore]
         public string SourceTransferId
@@ -473,7 +485,8 @@ namespace Stripe
         #endregion
 
         /// <summary>
-        /// Extra information about a charge. This will appear on your customer's credit card statement.
+        /// Extra information about a charge. This will appear on your customer's credit card
+        /// statement.
         /// </summary>
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
@@ -496,7 +509,8 @@ namespace Stripe
         #region Expandable Transfer
 
         /// <summary>
-        /// ID of the transfer to the destination account (only applicable if the charge was created using the destination parameter).
+        /// ID of the transfer to the destination account (only applicable if the charge was created
+        /// using the destination parameter).
         /// </summary>
         [JsonIgnore]
         public string TransferId
@@ -521,7 +535,8 @@ namespace Stripe
         public ChargeTransferData TransferData { get; set; }
 
         /// <summary>
-        /// A string that identifies this transaction as part of a group. See the Connect documentation for details.
+        /// A string that identifies this transaction as part of a group. See the Connect
+        /// documentation for details.
         /// </summary>
         [JsonProperty("transfer_group")]
         public string TransferGroup { get; set; }
