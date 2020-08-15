@@ -30,6 +30,7 @@ namespace Stripe
         /// <summary>
         /// Specifies how long the discount will be in effect. Can be <c>forever</c>, <c>once</c>,
         /// or <c>repeating</c>.
+        /// One of: <c>forever</c>, <c>once</c>, or <c>repeating</c>.
         /// </summary>
         [JsonProperty("duration")]
         public string Duration { get; set; }

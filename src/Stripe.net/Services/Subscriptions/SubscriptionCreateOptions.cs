@@ -73,6 +73,7 @@ namespace Stripe
         /// Stripe will attempt to pay this subscription at the end of the cycle using the default
         /// source attached to the customer. When sending an invoice, Stripe will email your
         /// customer an invoice with payment instructions. Defaults to <c>charge_automatically</c>.
+        /// One of: <c>charge_automatically</c>, or <c>send_invoice</c>.
         /// </summary>
         [JsonProperty("collection_method")]
         public string CollectionMethod { get; set; }
@@ -160,6 +161,8 @@ namespace Stripe
         ///
         /// <c>pending_if_incomplete</c> is only used with updates and cannot be passed when
         /// creating a subscription.
+        /// One of: <c>allow_incomplete</c>, <c>error_if_incomplete</c>, or
+        /// <c>pending_if_incomplete</c>.
         /// </summary>
         [JsonProperty("payment_behavior")]
         public string PaymentBehavior { get; set; }
@@ -200,6 +203,7 @@ namespace Stripe
         /// Passing <c>create_prorations</c> will cause proration invoice items to be created when
         /// applicable. Prorations can be disabled by passing <c>none</c>. If no value is passed,
         /// the default is <c>create_prorations</c>.
+        /// One of: <c>always_invoice</c>, <c>create_prorations</c>, or <c>none</c>.
         /// </summary>
         [JsonProperty("proration_behavior")]
         public string ProrationBehavior { get; set; }
@@ -208,6 +212,11 @@ namespace Stripe
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }
 
+        /// <summary>
+        /// If specified, the funds from the subscription's invoices will be transferred to the
+        /// destination and the ID of the resulting transfers will be found on the resulting
+        /// charges.
+        /// </summary>
         [JsonProperty("transfer_data")]
         public SubscriptionTransferDataOptions TransferData { get; set; }
 

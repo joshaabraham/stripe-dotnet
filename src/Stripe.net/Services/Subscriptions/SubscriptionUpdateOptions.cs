@@ -30,6 +30,7 @@ namespace Stripe
         /// subscription's billing cycle anchor to the current time. For more information, see the
         /// billing cycle <a
         /// href="https://stripe.com/docs/billing/subscriptions/billing-cycle">documentation</a>.
+        /// One of: <c>now</c>, or <c>unchanged</c>.
         /// </summary>
         [JsonProperty("billing_cycle_anchor")]
         public SubscriptionBillingCycleAnchor BillingCycleAnchor { get; set; }
@@ -63,6 +64,7 @@ namespace Stripe
         /// Stripe will attempt to pay this subscription at the end of the cycle using the default
         /// source attached to the customer. When sending an invoice, Stripe will email your
         /// customer an invoice with payment instructions. Defaults to <c>charge_automatically</c>.
+        /// One of: <c>charge_automatically</c>, or <c>send_invoice</c>.
         /// </summary>
         [JsonProperty("collection_method")]
         public string CollectionMethod { get; set; }
@@ -154,6 +156,8 @@ namespace Stripe
         /// does not update the subscription and returns an error instead. This was the default
         /// behavior for API versions prior to 2019-03-14. See the <a
         /// href="https://stripe.com/docs/upgrades#2019-03-14">changelog</a> to learn more.
+        /// One of: <c>allow_incomplete</c>, <c>error_if_incomplete</c>, or
+        /// <c>pending_if_incomplete</c>.
         /// </summary>
         [JsonProperty("payment_behavior")]
         public string PaymentBehavior { get; set; }
@@ -200,6 +204,7 @@ namespace Stripe
         /// <c>always_invoice</c>.
         ///
         /// Prorations can be disabled by passing <c>none</c>.
+        /// One of: <c>always_invoice</c>, <c>create_prorations</c>, or <c>none</c>.
         /// </summary>
         [JsonProperty("proration_behavior")]
         public string ProrationBehavior { get; set; }
@@ -220,6 +225,11 @@ namespace Stripe
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }
 
+        /// <summary>
+        /// If specified, the funds from the subscription's invoices will be transferred to the
+        /// destination and the ID of the resulting transfers will be found on the resulting
+        /// charges. This will be unset if you POST an empty value.
+        /// </summary>
         [JsonProperty("transfer_data")]
         public SubscriptionTransferDataOptions TransferData { get; set; }
 
